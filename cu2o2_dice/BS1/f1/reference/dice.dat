@@ -1,0 +1,125 @@
+
+     ____  _
+    |  _ \(_) ___ ___
+    | | | | |/ __/ _ \
+    | |_| | | (_|  __/
+    |____/|_|\___\___|   v1.0
+
+
+**************************************************************
+Dice  Copyright (C) 2017  Sandeep Sharma
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+Author:       Sandeep Sharma
+Contributors: James E Smith, Adam A Holmes, Bastien Mussard
+For detailed documentation on Dice please visit
+https://sanshar.github.io/Dice/
+and our group page for up to date information on other projects
+http://www.colorado.edu/lab/sharmagroup/
+**************************************************************
+
+User:             (null)
+Date:             Fri Jul 22 21:43:12 2022
+PID:              7925
+
+Path:             /home/fmalone_google_com/projects/Dice/Dice
+Commit:           cb7085d0c9b1bbe688472eee8f59deaf307f643c
+Branch:           master
+Compilation Date: May 25 2022 23:51:16
+
+
+**************************************************************
+INPUT FILE
+**************************************************************
+#system
+nocc 32
+0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 
+orbitals ./FCIDUMP
+nroots 1
+
+#variational
+schedule
+0	0.001
+3	0.0001
+5   0.00005
+end
+davidsonTol 5e-05
+dE 1e-08
+maxiter 9
+
+#pt
+nPTiter 0
+epsilon2 1e-07
+epsilon2Large 1000
+targetError 0.0001
+sampleN 200
+
+#misc
+io
+prefix /tmp
+DoOneRDM
+DoSpinOneRDM
+DoRDM
+
+writebestdeterminants 1000000
+
+
+
+**************************************************************
+SELECTING REFERENCE DETERMINANT(S)
+**************************************************************
+2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0  Given Ref. Energy:       -541.1809457553
+
+
+**************************************************************
+VARIATIONAL STEP  
+**************************************************************
+Iter Root       Eps1   #Var. Det.               Energy   #Davidson     Time(s)
+   0    0    1.00e-03        6010      -541.7122960833         11        0.43
+   1    0    1.00e-03       27833      -541.7783503412         16        1.23
+   2    0    1.00e-03       32657      -541.7815739836         13        1.53
+   3    0    1.00e-04      888639      -541.8216194788         18       20.43
+   4    0    1.00e-04      999539      -541.8222715994         12       25.71
+   5    0    5.00e-05     2380749      -541.8261606403         16       56.80
+   6    0    5.00e-05     2494794      -541.8263290842         11       66.62
+   7    0    5.00e-05     2503235      -541.8263411953          6       72.36
+   8    0    5.00e-05     2504125      -541.8263425258          4       76.98
+Performing final tight davidson with tol: 5e-05
+Exiting variational iterations
+
+Calculating 1-RDM
+
+Calculating 2-RDM
+E(one-body) from 2RDM:    -433.2891011129
+E(two-body) from 2RDM:     197.1710232371
+E from 2RDM:              -541.8263425258
+
+Variational calculation result
+Root             Energy     Time(s)
+   0     -541.8263425258       80.73
+
+Printing most important determinants
+ Det     weight  Determinant string
+State :   0
+   0       0.8761163195  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   2 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+   1      -0.1967021098  2 2 2 2 2   2 2 2 2 2   2 2 2 2 2   0 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+   2      -0.1093343230  2 2 2 2 2   2 2 2 2 2   2 2 2 2 0   2 0 2 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+   3      -0.1036224170  2 2 2 2 2   2 2 2 2 2   2 2 2 0 2   2 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+   4      -0.0817537312  2 2 2 2 2   2 2 2 2 2   2 2 0 2 2   2 2 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+   5      -0.0645539499  2 2 2 2 2   2 2 2 2 2   2 2 a 2 b   2 b a 0 0   0 0 0 0 0   0 0 0 0 0   0 0 
+
+
+**************************************************************
+CALCULATING RDMs
+**************************************************************
+
+
+**************************************************************
+Returning without error
+**************************************************************
+
+

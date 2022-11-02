@@ -1,0 +1,28 @@
+{
+    "system": {
+        "nup": 16,
+        "ndown": 16
+    },
+    "hamiltonian": {
+        "name": "Generic",
+        "integrals": "hamiltonian.h5"
+    },
+    "qmc": {
+        "dt": 0.005,
+        "nwalkers_per_task": 10,
+        "nsteps": 125,
+        "blocks": 100000,
+        "gpu": false,
+        "batched": true
+    },
+    "trial": {
+        "filename": "wfn.h5",
+        "ndets": 100,
+        "ndet_chunks": 10,
+        "compute_trial_energy": false,
+        "ndets_for_trial_props": 100
+    },
+    "estimators": {
+        "filename": "estimates_100.h5"
+    }
+}
