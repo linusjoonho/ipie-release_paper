@@ -1,0 +1,156 @@
+# Initialising pie simulation from ipie_1000000.json
+# Setting batched to True.
+# Git hash: ce6845f2991f320ea962d94abe596bea5eaa34fa-dirty.
+# Git branch: main.
+# Calculation uuid: 547b3d64-0c48-11ed-b44a-42010a000018.
+# Approximate memory available per node: 235.9874 GB.
+# Running on 600 MPI ranks.
+# Root processor name: clusternator-compute-0-0
+# Python interpreter: 3.9.12 (main, Apr  5 2022, 06:56:58)  [GCC 7.5.0]
+# Using numpy v1.19.2 from: /home/fmalone_google_com/miniconda3/envs/ipie_cpu/lib/python3.9/site-packages/numpy.
+# - BLAS lib: mkl_rt pthread
+# - BLAS dir: /home/fmalone_google_com/miniconda3/envs/ipie_cpu/lib
+# Using scipy v1.6.2 from: /home/fmalone_google_com/miniconda3/envs/ipie_cpu/lib/python3.9/site-packages/scipy.
+# Using h5py v3.6.0 from: /home/fmalone_google_com/miniconda3/envs/ipie_cpu/lib/python3.9/site-packages/h5py.
+# Using mpi4py v3.1.3 from: /home/fmalone_google_com/miniconda3/envs/ipie_cpu/lib/python3.9/site-packages/mpi4py.
+# - mpicc: /home/fmalone_google_com/miniconda3/envs/qmc/bin/mpicc
+# Package cupy not found.
+# MPIHandler detected 600 groups with 1 members each
+# Parsing input options for systems.Generic.
+# Number of alpha electrons: 16
+# Number of beta electrons: 16
+# Have shared memory: True
+# Time to read integrals: 1.115151
+# Note: symmetry not specified. Setting to default value of True.
+# Time to pack Cholesky vectors: 0.028394
+# Parsing input options for hamiltonians.Generic.
+# Found real Choleksy integrals.
+# Number of orbitals: 108
+# Approximate memory required by Cholesky vectors 0.058660 GB
+# Number of Cholesky vectors: 675
+# Number of fields: 675
+# Finished setting up hamiltonians.Generic object.
+# Approximate memory required by packed Cholesky vectors 0.029602 GB
+# random seed is 64167413
+# Building trial wavefunction object.
+# Setting filename to wfn.h5.
+# Reading wavefunction from wfn.h5.
+# Number of determinants in trial wavefunction: 1000000
+# Parsing input options for trial_wavefunction.MultiSlater.
+# Setting wicks to True.
+# Setting use_wicks_helper to True.
+# Setting optimized to True.
+# Creating trial wavefunction from CI-like expansion.
+# Assuming RHF reference.
+# Setting ndets to 1000000.
+# Setting compute_trial_energy to False.
+# Assuming orthogonal trial wavefunction expansion.
+# Trial wavefunction shape: (1, 108, 32)
+# Using initial wavefunction from file.
+# Setting ndets_for_trial_props to 100.
+# Setting ndet_chunks to 50.
+# Setting nact_orbitals to 28.
+# Setting nelec_cas to 32.
+# Using generalized Wick's theorem for the PHMSD trial
+# Setting the first determinant in expansion as the reference wfn for Wick's theorem.
+# Number of frozen orbitals: 0
+# Number of occupied electrons in active space trial: (16, 16)
+# Number of orbitals in active space trial: 28
+# Dominant memory cost **per walker** for optimized energy evaluation using Wick's algorithm: 0.8046627044677734 GB.
+# Setting additional member variables for Wick's theorem
+# Reference alpha determinant: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15]
+# Reference beta determinant: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15]
+# Number of alpha determinants at each level: [9044, 136290, 409198, 343273, 94003, 8109, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+# Number of beta determinants at each level: [9044, 136290, 409198, 343273, 94003, 8109, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+# Computing 1-RDM of the trial wfn for mean-field shift.
+# Using first 100 determinants for evaluation.
+# Time to compute 1-RDM: 40.57048988342285 s
+# Finished setting up trial_wavefunction.MultiSlater.
+# Constructing half rotated Cholesky vectors.
+# Shape of alpha half-rotated Cholesky: (675, 1728)
+# Shape of beta half-rotated Cholesky: (675, 1728)
+# Only performing half-rotation of the reference determinant
+# Half-Rotating Cholesky for determinant.
+# Memory required by half-rotated integrals:  0.0174 GB.
+# Time to half-rotated integrals: 0.0036313533782958984 s.
+# Note: recompute_ci not specified. Setting to default value of False.
+# Note: spin_proj not specified. Setting to default value of None.
+# Note: init_walker not specified. Setting to default value of None.
+# WARNING: skipping trial energy calculation is requested.
+# Getting propagator driver
+# Parsing input options for propagation.Continuous.
+# Using continuous Hubbard--Stratonovich transformations.
+# Using phaseless approximation: True
+# Setting force bias to True.
+# Time to mean field shift: 0.009180307388305664 s
+# Absolute value of maximum component of mean field shift: 8.97119938e+00.
+# Finished setting up propagation.GenericContinuous.
+# Using hybrid weight update.
+# Using phaseless approximation.
+# Setting up estimator object.
+# Writing estimator data to estimates_1000000.h5.
+# Finished settting up estimator object.
+# Getting WalkerBatchHandler
+# Setting up walkers.handler_batch.Walkers.
+# qmc.nwalkers = 2
+# qmc.ntot_walkers = 1200
+# Using single det walker with a multi det trial.
+# Note: population_control not specified. Setting to default value of pair_branch.
+# Using pair_branch population control algorithm.
+# Buffer size for communication: 5.16027212e-05 GB
+# Finish setting up walkers.handler.Walkers.
+# NOTE: cupy available but qmc.gpu == False.
+#       If this is unintended set gpu option in qmc  section.
+# Available memory on the node is 235.987 GB
+# Explanation of output column headers:
+# -------------------------------------
+# Iteration : Simulation iteration. iteration*dt = tau.
+# WeightFactor : Rescaling Factor from population control.
+# Weight : Total walker weight.
+# E_num : Numerator for projected energy estimator.
+# E_denom : Denominator for projected energy estimator.
+# ETotal : Projected energy estimator.
+# E1Body : Mixed one-body energy estimator.
+# E2Body : Mixed two-body energy estimator.
+# EHybrid : Hybrid energy.
+# Overlap : Walker average overlap.
+# Nav : Average number of electrons.
+# Time : Time per processor to complete one iteration.
+        Iteration      WeightFactor            Weight            ENumer            EDenom            ETotal            E1Body            E2Body           EHybrid           Overlap              Time
+ 0.0000000000e+00  1.2000000000e+03  1.2000000000e+03 -6.4998245929e+05  1.2000000000e+03 -5.4165204941e+02 -7.4251670968e+02  2.0086466027e+02  0.0000000000e+00  7.7249892976e-01  1.7927457270e+02
+ 1.2500000000e+02  2.0170796290e+03  1.5006300004e+03 -6.5044555162e+05  1.2000000000e+03 -5.4203795968e+02 -7.4193093157e+02  1.9989297189e+02 -2.1409032655e+01  3.3099271934e-01  7.5701494310e+00
+ 2.5000000000e+02  1.2304536966e+03  1.2013686692e+03 -6.5051638290e+05  1.2000000000e+03 -5.4209698575e+02 -7.4179656496e+02  1.9969957921e+02 -2.1557856990e+01  8.3537366638e-02  7.7031901410e+00
+ 3.7500000000e+02  1.1991676833e+03  1.1995931082e+03 -6.5051846319e+05  1.2000000000e+03 -5.4209871932e+02 -7.4169991734e+02  1.9960119802e+02 -2.1574022156e+01  4.6701040856e-02  7.6789480049e+00
+ 5.0000000000e+02  1.1982353796e+03  1.1993020044e+03 -6.5051747654e+05  1.2000000000e+03 -5.4209789712e+02 -7.4164615764e+02  1.9954826052e+02 -2.1572603390e+01  3.2213333302e-02  7.6887963176e+00
+ 6.2500000000e+02  1.1980689386e+03  1.1992060867e+03 -6.5052417135e+05  1.2000000000e+03 -5.4210347613e+02 -7.4161374157e+02  1.9951026544e+02 -2.1577811337e+01  2.3533600514e-02  7.6777645058e+00
+ 7.5000000000e+02  1.1976994396e+03  1.1989973745e+03 -6.5052263693e+05  1.2000000000e+03 -5.4210219744e+02 -7.4161584201e+02  1.9951364456e+02 -2.1571064788e+01  1.8052861911e-02  8.4230096095e+00
+ 8.7500000000e+02  1.1975470908e+03  1.1988644057e+03 -6.5050043674e+05  1.2000000000e+03 -5.4208369729e+02 -7.4160175519e+02  1.9951805791e+02 -2.1566057954e+01  1.4646557460e-02  9.2413104773e+00
+ 1.0000000000e+03  1.1973217593e+03  1.1989331098e+03 -6.5049734216e+05  1.2000000000e+03 -5.4208111846e+02 -7.4160380754e+02  1.9952268907e+02 -2.1571828915e+01  1.2402893730e-02  7.6249994815e+00
+ 1.1250000000e+03  1.1972935599e+03  1.1987714356e+03 -6.5050805411e+05  1.2000000000e+03 -5.4209004509e+02 -7.4159967445e+02  1.9950962936e+02 -2.1573329701e+01  1.0491239561e-02  7.6625674443e+00
+ 1.2500000000e+03  1.1971954632e+03  1.1985809005e+03 -6.5051696708e+05  1.2000000000e+03 -5.4209747256e+02 -7.4159392863e+02  1.9949645607e+02 -2.1575546249e+01  8.8402529958e-03  7.6695189123e+00
+ 1.3750000000e+03  1.1961753261e+03  1.1984278360e+03 -6.5050629206e+05  1.2000000000e+03 -5.4208857672e+02 -7.4163214140e+02  1.9954356468e+02 -2.1566906930e+01  7.5759484779e-03  7.6576252635e+00
+ 1.5000000000e+03  1.1961724367e+03  1.1982694111e+03 -6.5050443253e+05  1.2000000000e+03 -5.4208702710e+02 -7.4164334679e+02  1.9955631968e+02 -2.1564538040e+01  6.6432010154e-03  7.6562776189e+00
+ 1.6250000000e+03  1.1959701578e+03  1.1981007460e+03 -6.5051252917e+05  1.2000000000e+03 -5.4209377431e+02 -7.4162340742e+02  1.9952963312e+02 -2.1565833720e+01  5.7542872850e-03  7.6652010948e+00
+ 1.7500000000e+03  1.1970271493e+03  1.1982558023e+03 -6.5051777228e+05  1.2000000000e+03 -5.4209814357e+02 -7.4163771706e+02  1.9953957349e+02 -2.1578374173e+01  4.8730664471e-03  7.6764843018e+00
+ 1.8750000000e+03  1.1963720111e+03  1.1980454113e+03 -6.5051540952e+05  1.2000000000e+03 -5.4209617460e+02 -7.4170030589e+02  1.9960413129e+02 -2.1586207486e+01  4.2699796197e-03  7.6875776197e+00
+ 2.0000000000e+03  1.1955963517e+03  1.1975616887e+03 -6.5051476110e+05  1.2000000000e+03 -5.4209563425e+02 -7.4167404700e+02  1.9957841276e+02 -2.1565368711e+01  4.0159532823e-03  7.6972918563e+00
+ 2.1250000000e+03  1.1968552900e+03  1.1979442296e+03 -6.5053866357e+05  1.2000000000e+03 -5.4211555298e+02 -7.4162374915e+02  1.9950819617e+02 -2.1581599795e+01  3.6016447978e-03  7.6796007112e+00
+ 2.2500000000e+03  1.1961988216e+03  1.1975259498e+03 -6.5050874879e+05  1.2000000000e+03 -5.4209062399e+02 -7.4159965537e+02  1.9950903138e+02 -2.1567475405e+01  3.3571810689e-03  7.6830943647e+00
+ 2.3750000000e+03  1.1966668766e+03  1.1976981935e+03 -6.5052854946e+05  1.2000000000e+03 -5.4210712455e+02 -7.4164642617e+02  1.9953930162e+02 -2.1565054854e+01  3.3167181371e-03  7.6807147765e+00
+ 2.5000000000e+03  1.1971297535e+03  1.1978353948e+03 -6.5051517831e+05  1.2000000000e+03 -5.4209598193e+02 -7.4157508838e+02  1.9947910645e+02 -2.1584184944e+01  2.9943613808e-03  7.6763496125e+00
+ 2.6250000000e+03  1.1963246947e+03  1.1973009230e+03 -6.5049463291e+05  1.2000000000e+03 -5.4207886076e+02 -7.4158938969e+02  1.9951052893e+02 -2.1570712843e+01  2.8758156626e-03  7.6978719024e+00
+ 2.7500000000e+03  1.1961745518e+03  1.1973288473e+03 -6.5049659081e+05  1.2000000000e+03 -5.4208049234e+02 -7.4159371036e+02  1.9951321802e+02 -2.1569409708e+01  2.6607742137e-03  7.6912656211e+00
+ 2.8750000000e+03  1.1966117359e+03  1.1974253202e+03 -6.5050231121e+05  1.2000000000e+03 -5.4208525934e+02 -7.4155957399e+02  1.9947431465e+02 -2.1571173551e+01  2.4828995471e-03  7.6750452443e+00
+ 3.0000000000e+03  1.1964698949e+03  1.1972499331e+03 -6.5050566343e+05  1.2000000000e+03 -5.4208805286e+02 -7.4158551121e+02  1.9949745835e+02 -2.1565567206e+01  2.3603510463e-03  7.6821565135e+00
+ 3.1250000000e+03  1.1958240469e+03  1.1971875151e+03 -6.5052412318e+05  1.2000000000e+03 -5.4210343599e+02 -7.4159817927e+02  1.9949474328e+02 -2.1572155661e+01  2.3318072844e-03  7.6862938683e+00
+ 3.2500000000e+03  1.1961680529e+03  1.1970864661e+03 -6.5051858050e+05  1.2000000000e+03 -5.4209881708e+02 -7.4162191332e+02  1.9952309624e+02 -2.1575308271e+01  2.2011435593e-03  7.6863348557e+00
+ 3.3750000000e+03  1.1962838722e+03  1.1970687285e+03 -6.5052060995e+05  1.2000000000e+03 -5.4210050829e+02 -7.4154841982e+02  1.9944791153e+02 -2.1574543892e+01  2.1282389395e-03  7.6773614281e+00
+ 3.5000000000e+03  1.1965759280e+03  1.1971703338e+03 -6.5052087324e+05  1.2000000000e+03 -5.4210072770e+02 -7.4155895928e+02  1.9945823159e+02 -2.1572014364e+01  2.0429263437e-03  7.6913358557e+00
+ 3.6250000000e+03  1.1963525976e+03  1.1973061245e+03 -6.5051701812e+05  1.2000000000e+03 -5.4209751510e+02 -7.4158960360e+02  1.9949208849e+02 -2.1581554352e+01  1.8925229121e-03  7.6928159559e+00
+ 3.7500000000e+03  1.1965203343e+03  1.1971385259e+03 -6.5050781895e+05  1.2000000000e+03 -5.4208984912e+02 -7.4165716250e+02  1.9956731337e+02 -2.1581376722e+01  1.8698422435e-03  7.6966333300e+00
+ 3.8750000000e+03  1.1949367551e+03  1.1969421894e+03 -6.5050721921e+05  1.2000000000e+03 -5.4208934934e+02 -7.4163129906e+02  1.9954194972e+02 -2.1555572517e+01  1.8041165848e-03  7.7026728156e+00
+ 4.0000000000e+03  1.1961169799e+03  1.1973526595e+03 -6.5051536115e+05  1.2000000000e+03 -5.4209613429e+02 -7.4167980109e+02  1.9958366680e+02 -2.1581022396e+01  1.7173501295e-03  7.7018827424e+00
+ 4.1250000000e+03  1.1958471407e+03  1.1967241398e+03 -6.5051029479e+05  1.2000000000e+03 -5.4209191233e+02 -7.4162155282e+02  1.9952964049e+02 -2.1566141833e+01  1.7278212269e-03  7.7047849404e+00
+ 4.2500000000e+03  1.1956829405e+03  1.1970363944e+03 -6.5051704180e+05  1.2000000000e+03 -5.4209753484e+02 -7.4159230551e+02  1.9949477067e+02 -2.1568954901e+01  1.6593058604e-03  7.7009959195e+00
+ 4.3750000000e+03  1.1961874834e+03  1.1968804848e+03 -6.5051000586e+05  1.2000000000e+03 -5.4209167155e+02 -7.4160025330e+02  1.9950858175e+02 -2.1575860405e+01  1.6666975712e-03  7.6935356166e+00
+ 4.5000000000e+03  1.1949552190e+03  1.1967762175e+03 -6.5052767998e+05  1.2000000000e+03 -5.4210639998e+02 -7.4159932619e+02  1.9949292620e+02 -2.1561809702e+01  1.6759506982e-03  7.6920623024e+00
